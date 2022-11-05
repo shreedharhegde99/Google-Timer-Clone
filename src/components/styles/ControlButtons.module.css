@@ -1,0 +1,37 @@
+.ButtonContainer {
+  display: flex;
+  border-top: solid 1px #999999af;
+}
+
+.ButtonContainer > div {
+  margin: 10px;
+  padding: 10px;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  font-weight: bold;
+  padding: 8px 19px;
+}
+.ButtonContainer > div:first-child button {
+  color: white;
+  background-color: #2583fd;
+  width: 82px;
+}
+
+.ButtonContainer > div:last-child button {
+  border: 1px solid #bbbbbbb7;
+  color: #006eff;
+  background-color: white;
+  transition: all 0.2s ease-in;
+}
+
+.ButtonContainer > div:last-child button:hover {
+  border: 1px solid #acd0ff00;
+  background-color: #acd0ff2c;
+  /* padding: 9px 20px; */
+  transition: all 0.2s ease-in;
+}

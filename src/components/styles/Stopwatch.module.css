@@ -1,0 +1,29 @@
+.TimeContainer > div > span:first-child,
+.TimeContainer > div:last-child > h2 {
+  font-family: clockicons, sans-serif;
+}
+
+.TimeContainer {
+  display: flex;
+  align-items: baseline;
+}
+
+.TimeContainer > div {
+  padding: 20px;
+}
+
+.TimeContainer > div > span:first-child {
+  font-size: 4rem;
+  /* color: red; */
+}
+.TimeContainer > div > span:last-child {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.TimeContainer > div:last-child > h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 2.2rem;
+  font-variant-numeric: slashed-zero;
+}

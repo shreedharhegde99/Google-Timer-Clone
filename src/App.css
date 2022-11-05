@@ -1,0 +1,21 @@
+.App {
+  /* height: 500px; */
+  border: 1px solid #999999af;
+  border-radius: 10px;
+  width: max-content;
+  margin: 50px auto;
+}
+.TitleContainer {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #999999af;
+}
+
+.TitleContainer > div {
+  box-sizing: border-box;
+  width: 250px;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 0.8rem;
+  cursor: pointer;
+}

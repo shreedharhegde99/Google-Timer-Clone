@@ -1,0 +1,41 @@
+.TimerInputContainer > input {
+  border: none;
+  outline: none;
+  font-size: 2.5rem;
+  height: 50px;
+  padding: 0px 50px;
+  max-width: 500px;
+  box-sizing: border-box;
+}
+
+.TimerInputContainer {
+  box-sizing: border-box;
+  max-width: 500px;
+  padding: 33.5px 0px;
+}
+
+.TimeContainer {
+  display: flex;
+  box-sizing: border-box;
+  max-width: 500px;
+}
+.TimeContainer > div {
+  padding: 5px 20px;
+}
+
+.TimeContainer > div :first-child {
+  font-size: 3rem;
+}
+.TimeContainer > div :last-child {
+  font-size: 2rem;
+}
+
+.Progressbar {
+  box-sizing: border-box;
+  width: 500px;
+  height: 5px;
+  vertical-align: bottom;
+  margin-bottom: -3px;
+  box-shadow: 0px 0px 0px inset;
+  /* background-color: white; */
+}
