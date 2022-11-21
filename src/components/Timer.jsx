@@ -23,12 +23,12 @@ export function Timer() {
   }
 
   function toggleStart() {
+    if (time === "" || !time) return;
+
     if (!progressing) {
       setProgress(Number(time));
       setProgressing(true);
     }
-
-    if (time === "" || !time) return;
 
     if (timerRef.current) {
       clearInterval(timerRef.current);
