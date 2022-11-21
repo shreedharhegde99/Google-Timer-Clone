@@ -28,7 +28,7 @@ export function Timer() {
       setProgressing(true);
     }
 
-    if (time === "") return;
+    if (time === "" || !time) return;
 
     if (timerRef.current) {
       clearInterval(timerRef.current);
@@ -41,15 +41,15 @@ export function Timer() {
 
     timerRef.current = setInterval(() => {
       setTime((prev) => {
-        if (prev <= 0) {
+        if (prev <= 1) {
           clearInterval(timerRef.current);
           timerRef.current = null;
-          //   setTime(0);
+          // setTime(0);
           setRunning(false);
           setStarted(false);
           setProgress(0);
           setProgressing(false);
-          return;
+          return "";
         }
 
         return prev - 1;
@@ -85,7 +85,9 @@ export function Timer() {
             <input
               type="text"
               value={time?.toString()}
-              onChange={(e) => setTime(Number(e.target.value))}
+              onChange={(e) =>
+                isNaN(e.target.value) ? null : setTime(Number(e.target.value))
+              }
               placeholder="00 s"
             />
           </div>
@@ -114,7 +116,11 @@ export function Timer() {
               </div>
             </div>
             <div>
-              <progress max={progress} value={time} className={Progressbar} />
+              <progress
+                max={progress}
+                value={progress - time}
+                className={Progressbar}
+              />
             </div>
           </Fragment>
         )}
