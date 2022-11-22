@@ -1,6 +1,8 @@
 ## Google Timer App Clone .
 
-Created using React
+## Tech stacks
+- React
+- CSS
 
 > ## Timer
 
